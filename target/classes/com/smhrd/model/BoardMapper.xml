@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smhrd.model.BoardMapper">
+
+
+	<insert id="write" parameterType="com.smhrd.model.Board">
+		insert into web_board values(
+			num_board.nextval,
+			#{title},
+			#{writer},
+			#{filename},
+			#{content},
+			SYSDATE
+		)
+		
+	</insert>
+
+	<!-- 전체 게시글을 읽어오는 sql 문장 필요! -->
+	<select id="list" resultType="com.smhrd.model.Board">
+		select * from web_board	
+	</select>
+
+	<!-- 게시글 하나만 읽어오는 sql 문장 -->
+	<select id="detail" parameterType="string" 
+			resultType="com.smhrd.model.Board">
+			select * from web_board
+			where num =#{num}
+		
+	</select>
+
+
+
+</mapper>

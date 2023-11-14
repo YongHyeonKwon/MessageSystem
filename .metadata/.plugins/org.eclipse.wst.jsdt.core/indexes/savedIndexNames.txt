@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\smhrd\Desktop\MessageSystem\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1158423011.index
+1689794530.index
+2081304097.index
+814521916.index
+2551386677.index
+1666927536.index

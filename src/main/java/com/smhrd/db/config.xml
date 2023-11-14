@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <!-- config.xml : 데이터베이스 연결에 필요한 정보들을 실제로 
+  					하나하나 연결하거나 관리하는 파일! -->
+  
+  
+<configuration>
+	<!-- db.properties 파일과 연결하기! -->
+	<properties resource="com/smhrd/db/db.properties"></properties>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <!-- sql 문장들이 정리된 파일을 연결하는 태그 -->
+  <mappers>
+    <mapper resource="com/smhrd/model/WebMemberMapper.xml"/>
+    <mapper resource="com/smhrd/model/MessageMapper.xml"/>
+    <mapper resource="com/smhrd/model/BoardMapper.xml"/>
+  </mappers>
+</configuration>

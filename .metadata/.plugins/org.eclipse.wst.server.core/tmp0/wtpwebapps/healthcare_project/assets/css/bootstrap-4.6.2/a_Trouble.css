@@ -1,0 +1,31 @@
+/* ★트러블슈팅★ */
+
+
+/* css반영이 느릴 때 
+
+Eclipse -> Server -> 우다단 -> Publish to Server -> F5
+웹 페이지에서 Shift+F5 누르면 바로 반영 됨 */
+
+
+
+/* 깃 허브로 작업 푸쉬하는 법 
+
+좌측 메뉴바 중에서 동그라미 선으로 연결된 거 클릭
+Source Control -> 파란색 커밋 버튼 옆 아래꺽쇠모양 -> 
+More Actions -> Commit and Push
+*/
+
+
+/* members_datatable.jsp 주석 문제
+
+<!-- chart.js --> 안에 있는 <!-- --> 주석이 안먹힘
+일단 슬래쉬 *로 수정해 놓음
+
+*/
+
+/* members_datatable.jsp 작업 내용
+
+좌측 우측 전체 화면 9:3으로 조정
+하단 캘린더 제거(주석으로 처리함)
+
+*/

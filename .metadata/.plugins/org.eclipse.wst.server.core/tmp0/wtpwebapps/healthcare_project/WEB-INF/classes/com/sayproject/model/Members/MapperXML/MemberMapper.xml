@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sayprojce.model.Members.MapperXML.MemberMapper">
+    <!-- Member 테이블을 사용한 SQL 에 대한 실행 문장들을 정리하는 파일 -->
+    <!-- id 속성 parameterType 속성 -->
+    <insert id="memberJoin" parameterType="com.sayproject.model.Members.Member">
+        insert into members (kakao_id, password, phone, address) values ( #{kakao_id}, #{password}, #{phone}, #{address} )
+    </insert>
+    <select id="memberJoinExist" resultType="int" parameterType="string">
+        Select count(kakao_id) From members Where kakao_id=#{email}
+    </select>
+    <select id="memberLogin" resultType="com.sayproject.model.Members.Member" parameterType="com.sayproject.model.Members.Member">
+        Select kakao_id, phone, address From members Where kakao_id=#{email} and password=#{password}
+    </select>
+    <select id="memberList" resultType="com.sayproject.model.Members.Member">
+		Select * From members ORDER BY NO
+	</select>
+</mapper>
